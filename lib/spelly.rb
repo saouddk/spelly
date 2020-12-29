@@ -18,4 +18,12 @@ class Spelly
     end
     results
   end
+  
+  def percentage_spelling_correct(words)
+    spelling_correct = 0
+    words.each do |word|
+      spelling_correct += 1 if @dict.spell(word)
+    end
+    (spelling_correct.to_f/words.length.to_f)
+  end
 end
