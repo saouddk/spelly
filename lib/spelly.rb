@@ -14,9 +14,7 @@ class Spelly
   def spell_check(words)
     results = []
     words.each do |word|
-      unless @dict.check?(word)
-        results << { word: word, suggest: @dict.suggest(word) }
-      end
+      results << { word: word, spell_check: @dict.spell(word) }
     end
     results
   end
