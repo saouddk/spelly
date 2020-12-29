@@ -8,7 +8,7 @@ class Spelly
   def initialize(language)
     path = File.expand_path('../lib/dict', File.dirname(__FILE__))
     # path = "#{Gem.loaded_specs['spelly'].full_gem_path}/lib/dict"
-    @dict = Hunspell.new(path, language)
+    @dict = Hunspell.new("#{path}/#{language}.aff", "#{path}/#{language}.dic")
   end
 
   def spell_check(words)
