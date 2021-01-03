@@ -27,4 +27,9 @@ class Spelly
     end
     (spelling_correct.to_f/words.length.to_f)
   end
+  
+  def close
+    @dict.close
+  rescue ArgumentError
+  end
 end
