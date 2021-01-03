@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'ffi/hunspell'
+require 'ffi/hunspell/dictionary'
 
 class Spelly
   attr_accessor :dict
